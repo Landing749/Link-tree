@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athan Meir E. Obrero | Portfolio & Achievements</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .link-card:active {
+            transform: scale(0.98);
+        }
+        #toast {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translate(-50%, 100px);
+            opacity: 0;
+        }
+        #toast.show {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+        }
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 10px;
+        }
+        .tech-badge {
+            font-size: 0.65rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 selection:bg-indigo-500/30 overflow-x-hidden">
+
+    <!-- Decorative background elements -->
+    <div class="blob -top-20 -left-20"></div>
+    <div class="blob top-1/2 -right-20"></div>
+    <div class="blob -bottom-20 -left-20"></div>
+
+    <div class="max-w-xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center min-h-screen relative">
+        
+        <!-- Profile Header -->
+        <header class="text-center mb-8 group w-full">
+            <div class="relative w-28 h-28 md:w-36 md:h-36 mb-6 mx-auto">
+                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl transition-transform hover:scale-105 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+                    <!-- PLACEHOLDER FOR ACTUAL FACE: Replace the src below with your photo URL -->
+                    <img 
+                        src="pfp.png" 
+                        alt="Athan Meir E. Obrero" 
+                        class="w-full h-full object-cover"
+                        id="profile-img"
+                    >
+                    <!-- Overlay hint for the user (only visible in dev) -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 text-white text-[10px] font-bold pointer-events-none uppercase">
+                        Athan Photo
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
+                Athan Meir E. Obrero
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg font-medium mb-1">
+                Full Stack Developer & Student Leader
+            </p>
+            <p class="text-indigo-600 dark:text-indigo-400 text-sm font-semibold mb-3 flex items-center justify-center gap-1">
+                <i data-lucide="school" class="w-4 h-4"></i>
+                Cvsu LSHS Main Campus
+            </p>
+            <div class="flex items-center justify-center gap-2 text-xs text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] font-bold">
+                <i data-lucide="map-pin" class="w-3 h-3 text-indigo-500"></i>
+                <span>Philippines</span>
+            </div>
+        </header>
+
+        <!-- Quote Section -->
+        <div class="w-full mb-12 text-center px-4">
+            <div class="bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm p-6 rounded-3xl border border-slate-200/50 dark:border-slate-800/50 italic shadow-sm">
+                <i data-lucide="quote" class="w-6 h-6 text-indigo-400 mx-auto mb-3 opacity-50"></i>
+                <p class="text-slate-700 dark:text-slate-300 text-sm md:text-base font-medium leading-relaxed">
+                    "Strive not to be a success, but rather to be of value."
+                </p>
+                <p class="text-indigo-600 dark:text-indigo-400 text-xs font-bold mt-2 uppercase tracking-widest">– Albert Einstein</p>
+            </div>
+        </div>
+
+        <main class="w-full space-y-12">
+            
+            <!-- SECTION: CONNECT -->
+            <section class="space-y-3">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600 ml-2 mb-4 flex items-center gap-2">
+                    <i data-lucide="share-2" class="w-3 h-3"></i> Connect
+                </h2>
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="https://www.facebook.com/athan.meir.obrero" target="_blank" class="link-card flex items-center justify-center gap-2 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-600 transition-all shadow-sm group">
+                        <i data-lucide="facebook" class="w-5 h-5 group-hover:text-blue-500"></i>
+                        <span class="font-bold text-sm">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/athanmeir" target="_blank" class="link-card flex items-center justify-center gap-2 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-pink-500 dark:hover:border-pink-600 transition-all shadow-sm group">
+                        <i data-lucide="instagram" class="w-5 h-5 group-hover:text-pink-500"></i>
+                        <span class="font-bold text-sm">Instagram</span>
+                    </a>
+                    <a href="https://www.threads.com/@athanmeir" target="_blank" class="link-card flex items-center justify-center gap-2 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-500 dark:hover:border-slate-400 transition-all shadow-sm group">
+                        <i data-lucide="at-sign" class="w-5 h-5 group-hover:text-slate-600 dark:group-hover:text-slate-300"></i>
+                        <span class="font-bold text-sm">Threads</span>
+                    </a>
+                    <a href="https://github.com/Landing749" target="_blank" class="link-card flex items-center justify-center gap-2 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-600 transition-all shadow-sm group">
+                        <i data-lucide="github" class="w-5 h-5 group-hover:text-indigo-500"></i>
+                        <span class="font-bold text-sm">GitHub</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SECTION: TECH STACK -->
+            <section class="space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600 ml-2 mb-4 flex items-center gap-2">
+                    <i data-lucide="layers" class="w-3 h-3"></i> Tech Stack
+                </h2>
+                <div class="flex flex-wrap gap-2 px-2">
+                    <span class="tech-badge bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">React</span>
+                    <span class="tech-badge bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">Node.js</span>
+                    <span class="tech-badge bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400">TypeScript</span>
+                    <span class="tech-badge bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400">HTML5/CSS3</span>
+                    <span class="tech-badge bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400">Tailwind</span>
+                    <span class="tech-badge bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400">PostgreSQL</span>
+                    <span class="tech-badge bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">Git/GitHub</span>
+                </div>
+            </section>
+
+            <!-- SECTION: FEATURED PROJECTS -->
+            <section class="space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600 ml-2 mb-4 flex items-center gap-2">
+                    <i data-lucide="code" class="w-3 h-3"></i> Featured Projects
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="group p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-500/30 transition-all">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="bg-indigo-50 dark:bg-indigo-900/30 p-2.5 rounded-2xl text-indigo-600">
+                                <i data-lucide="layout" class="w-6 h-6"></i>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="https://github.com/Landing749/Dr.Alfredo-Pio-De-Roda" class="p-2 text-slate-400 hover:text-indigo-500 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                                <a href="https://dapres.dpdns.org/" class="p-2 text-slate-400 hover:text-indigo-500 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">Dr. Alfredo Pio De Roda ES Website</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
+                            A high-performance Website utilizing Firebase Tailwind And Built in XSS Protection.
+                        </p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Firebase</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <div class="group p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-purple-500/30 transition-all">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="bg-purple-50 dark:bg-purple-900/30 p-2.5 rounded-2xl text-purple-600">
+                                <i data-lucide="database" class="w-6 h-6"></i>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="https://github.com/Landing749/7-Matapat" class="p-2 text-slate-400 hover:text-purple-500 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                                <a href="https://landing749.github.io/7-Matapat/" class="p-2 text-slate-400 hover:text-purple-500 transition-colors"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">7-Matapat Section Website</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
+                            A Website for The section 7-Matapat at CvSU Complete with file upload systems and airtight security
+                        </p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Node.js</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Firebase</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Cloudinary</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: ACADEMIC -->
+            <section class="space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600 ml-2 mb-4 flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-3 h-3"></i> Academic Excellence
+                </h2>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                        <div class="bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-2xl text-indigo-600">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold text-lg block leading-tight">Valedictorian</span>
+                            <span class="text-sm text-slate-500 dark:text-slate-400 mt-1">Graduated with highest honors at the top of the class.</span>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-2xl text-yellow-600">
+                            <i data-lucide="pen-tool" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold text-lg block leading-tight text-slate-900 dark:text-white">Journalism 3rd Place</span>
+                            <span class="text-sm text-slate-500 dark:text-slate-400 mt-1">Recognized for excellence in Editorial Writing.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: SPORTS -->
+            <section class="space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600 ml-2 mb-4 flex items-center gap-2">
+                    <i data-lucide="trophy" class="w-3 h-3"></i> Sports Achievements
+                </h2>
+                <div class="grid grid-cols-1 gap-3">
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center gap-4 shadow-sm">
+                        <span class="text-2xl">🥇</span>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-slate-900 dark:text-white">Municipal & District Champion</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">Table Tennis Champion</span>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center gap-4 shadow-sm">
+                        <span class="text-2xl">🥉</span>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-slate-900 dark:text-white">Provincial Meet 3rd Place</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-widest">Table Tennis Representative</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: COMMUNITY -->
+            <section class="space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600 ml-2 mb-4 flex items-center gap-2">
+                    <i data-lucide="users" class="w-3 h-3"></i> Community & Service
+                </h2>
+                <div class="grid grid-cols-1 gap-3">
+                    <div class="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                        <div class="bg-rose-50 dark:bg-rose-900/20 p-3 rounded-2xl text-rose-600">
+                            <i data-lucide="church" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold text-lg block leading-tight">Altar Server</span>
+                            <span class="text-sm text-slate-500 dark:text-slate-400 mt-1">Dedicated service to the church community.</span>
+                        </div>
+                    </div>
+                    <div class="p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                        <div class="bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-2xl text-cyan-600">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <span class="font-bold text-lg block leading-tight">Columbian Squires</span>
+                            <span class="text-sm text-slate-500 dark:text-slate-400 mt-1">Active member building leadership and fellowship.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Share & Actions -->
+        <div class="mt-20 flex flex-col items-center gap-4 w-full">
+            <button
+                onclick="handleShare()"
+                id="share-btn"
+                class="flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white rounded-3xl font-bold text-sm transition-all hover:bg-indigo-700 active:scale-95 shadow-xl shadow-indigo-500/25"
+            >
+                <i data-lucide="share-2" class="w-4 h-4"></i>
+                <span id="share-text">Share My Portfolio</span>
+            </button>
+            <p class="text-xs text-slate-400 font-medium italic">Available for collaborations and creative projects.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 text-slate-400 dark:text-slate-600 text-xs text-center pb-12">
+            <div class="flex justify-center gap-4 mb-4">
+                <i data-lucide="cpu" class="w-4 h-4 opacity-30"></i>
+                <i data-lucide="code" class="w-4 h-4 opacity-30"></i>
+                <i data-lucide="command" class="w-4 h-4 opacity-30"></i>
+            </div>
+            <p class="font-bold uppercase tracking-widest text-[10px]">Athan Meir E. Obrero</p>
+            <p class="mt-2 text-[10px] opacity-60 italic leading-relaxed">"Value is created when passion meets code."</p>
+            <p class="mt-4 opacity-40">© <span id="year"></span> • Built with Code & Passion</p>
+        </footer>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 glass text-slate-900 dark:text-white px-8 py-4 rounded-3xl shadow-2xl border border-white/20 flex items-center gap-3 text-sm font-bold z-50">
+        <div class="bg-green-500 p-1.5 rounded-full text-white">
+            <i data-lucide="check" class="w-4 h-4"></i>
+        </div>
+        <span>Portfolio link copied!</span>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function handleShare() {
+            const url = window.location.href;
+            const textArea = document.createElement("textarea");
+            textArea.value = url;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            const shareText = document.getElementById('share-text');
+            const originalText = shareText.textContent;
+            shareText.textContent = 'Copied!';
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => { shareText.textContent = originalText; }, 300);
+            }, 2500);
+        }
+
+        const img = document.getElementById('profile-img');
+        img.onerror = function() {
+            this.src = 'https://ui-avatars.com/api/?name=Athan+Meir+Obrero&background=6366f1&color=fff&size=256';
+        };
+    </script>
+</body>
+</html>
